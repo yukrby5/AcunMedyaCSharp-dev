@@ -1,0 +1,26 @@
+birden fazla değeri tek bir veri yapısında saklamamıza olanak sağlayan bir koleksiyon türüdür----('Benim bildiğim')----
+
+-İnternetten araştırdığımda  ise;
+
+Temel Özellikleri:
+Aynı Veri Tipi: Bir dizideki tüm öğeler aynı veri tipine sahiptir. Örneğin, bir tamsayı dizisinde yalnızca tamsayılar bulunur.
+
+Sabit Boyut: Diziler genellikle sabit boyutlu yapılardır, yani dizi oluşturulduktan sonra boyutu değiştirilemez. Ancak bazı programlama dillerinde dinamik diziler de bulunur (örneğin, List türü gibi).
+
+İndeksle Erişim: Dizinin her elemanına, dizinin başlangıcından itibaren sıfırdan başlayarak numaralandırılan indeksler ile erişilir.
+
+Düzenli ve Ardışık: Dizilerdeki elemanlar bellekte ardışık (yani yan yana) olarak saklanır, bu da dizinin elemanlarına hızlı erişim sağlar.
+
+
+Dizilerin Avantajları:
+Düzenli Veri Saklama: Aynı türdeki verileri bir arada saklamak kolaylaşır.
+Hızlı Erişim: Dizinin her elemanına indeks aracılığıyla doğrudan erişilebilir, bu da hızlı veri işlemeyi sağlar.
+Bellek Yönetimi: Diziler bellekte ardışık yer kapladığından, belleği verimli kullanabilir.
+Dizilerin Dezavantajları:
+Sabit Boyut: Bir dizi oluşturulduğunda boyutu belirlenir ve çalışma sırasında boyutu değiştirilemez. Bu, esneklik konusunda sınırlamalara yol açar.
+Eleman Eklemek/Çıkarmak Zor: Dizi boyutunu değiştirmek, eleman eklemek veya çıkarmak zor olabilir, çünkü diziler sabit boyutlu yapılar olduğundan her değişiklikte yeni bir dizi oluşturulması gerekebilir.
+Dizilerin Kullanım Alanları:
+Veri Koleksiyonları: Aynı türdeki verilerin toplandığı durumlar için diziler çok yaygın kullanılır (örneğin, öğrenci notları, ürün listeleri vb.).
+Matematiksel Hesaplamalar: Diziler, özellikle büyük veri setleri ve matematiksel hesaplamalar için etkilidir.
+Veri İndeksi: Sıralı veriler için diziler, hızlı indeksleme ve veri erişimi sağlar.
+Sonuç:
