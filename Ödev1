@@ -1,0 +1,97 @@
+using System;
+
+// Interface tanımlaması yaptık
+public interface IHareket
+{
+    void KaradaHareket();
+    void DenizdeYuzme();
+    void HavadaUcma();
+}
+
+// BMW sınıfı oluşturduk
+public class BMW : IHareket
+{
+    public void KaradaHareket()
+    {
+        Console.WriteLine("BMW çok hızlı gider.");
+    }
+
+    public void DenizdeYuzme()
+    {
+        Console.WriteLine("BMW denizde yüzebilir.");
+    }
+
+    public void HavadaUcma()
+    {
+        Console.WriteLine("BMW havada uçabilir.");
+    }
+}
+
+// Mercedes sınıfı oluşturduk
+public class Mercedes : IHareket
+{
+    public void KaradaHareket()
+    {
+        Console.WriteLine("Mercedes karada hareket edebilir.");
+    }
+
+    public void DenizdeYuzme()
+    {
+        Console.WriteLine("Mercedes denizde yüzebilir.");
+    }
+
+    public void HavadaUcma()
+    {
+        Console.WriteLine("Mercedes havada uçabilir.");
+    }
+}
+
+// Porsche sınıfı oluşturduş
+public class Porsche : IHareket
+{
+    public void KaradaHareket()
+    {
+        Console.WriteLine("Porsche karada hareket edebilir.");
+    }
+
+    public void DenizdeYuzme()
+    {
+        Console.WriteLine("Porsche denizde yüzemez.");
+    }
+
+    public void HavadaUcma()
+    {
+        Console.WriteLine("Porsche havada uçabilir.");
+    }
+}
+
+// Programın çalıştırılması
+class Program
+{
+    static void Main(string[] args)
+    {
+        // BMW nesnesi oluşturuluyor ve hareket özellikleri çağrılıyor
+        IHareket bmw = new BMW();
+        Console.WriteLine("BMW Özellikleri:");
+        bmw.KaradaHareket();
+        bmw.DenizdeYuzme();
+        bmw.HavadaUcma();
+        Console.WriteLine();
+
+        // Mercedes nesnesi oluşturuluyor ve hareket özellikleri çağrılıyor
+        IHareket mercedes = new Mercedes();
+        Console.WriteLine("Mercedes Özellikleri:");
+        mercedes.KaradaHareket();
+        mercedes.DenizdeYuzme();
+        mercedes.HavadaUcma();
+        Console.WriteLine();
+
+        // Porsche nesnesi oluşturuluyor ve hareket özellikleri çağrılıyor
+        IHareket porsche = new Porsche();
+        Console.WriteLine("Porsche Özellikleri:");
+        porsche.KaradaHareket();
+        porsche.DenizdeYuzme();
+        porsche.HavadaUcma();
+    }
+}
+
