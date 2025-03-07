@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+
+// Interface: Yakit Tuketimidir
+public interface IYakitTuketimi
+{
+    // Her araba için yakıt tüketimini hesaplayacak metodg
+    double YakitTuketimi();
+}
+
+// Abstract class: Araba
+public abstract class Araba : IYakitTuketimi
+{
+    public string Model { get; set; }
+
+    // Interface'deki metodun entegeresinş yapılacak, ancak her araba tipi farklı değer döndürecek
+    public abstract double YakitTuketimi();
+}
+
+// BMW sınıfı, Araba sınıfından devamıdır
+public class BMW : Araba
+{
+    public override double YakitTuketimi()
+    {
+        return 80.0; // BMW'nin 1 saatlik sürüşte harcadığı benzin miktarı
+    }
+}
+
+// Mercedes sınıfı, Araba sınıfından devamıdır
+public class Mercedes : Araba
+{
+    public override double YakitTuketimi()
+    {
+        return 70.0; // Mercedes'in 1 saatlik sürüşte harcadığı benzin miktarı
+    }
+}
+
+// Porsche sınıfı, Araba sınıfından devamıdır
+public class Porsche : Araba
+{
+    public override double YakitTuketimi()
+    {
+        return 60.0; // Porsche'nin 1 saatlik sürüşte harcadığı benzin miktarı
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Araba nesnelerini oluşturuyoruz
+        List<Araba> arabalar = new List<Araba>
+        {
+            new BMW(),
+            new Mercedes(),
+            new Porsche()
+        };
+
+        // Toplam yakıt tüketimini hesaplama
+        double toplamYakit = 0;
+        foreach (var araba in arabalar)
+        {
+            toplamYakit += araba.YakitTuketimi(); // Her arabadan yakıt tüketimini alıyoruz
+        }
+
+        // Toplam yakıt tüketimini ekrana yazdırıyoruz
+        Console.WriteLine("Toplam yakıt tüketimi: " + toplamYakit + " L");
+    }
+}
