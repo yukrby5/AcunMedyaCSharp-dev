@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+
+// Calisan adında bir abstract sınıf
+public abstract class Calisan
+{
+    public string Isim { get; set; }
+
+    // Çalışanların maaşlarını hesaplayacak abstract metod
+    public abstract decimal MaasinizNedir();
+}
+
+// GenelMudur sınıfı, Calisan sınıfından devamıdır
+public class GenelMudur : Calisan
+{
+    public override decimal MaasinizNedir()
+    {
+        return 80000;  // Genel Müdür maaşı
+    }
+}
+
+// Mudur sınıfı, Calisan sınıfından devamıdır
+public class Mudur : Calisan
+{
+    public override decimal MaasinizNedir()
+    {
+        return 60000;  // Müdür maaşı
+    }
+}
+
+// Programci sınıfı, Calisan sınıfından devamıdır
+public class Programci : Calisan
+{
+    public override decimal MaasinizNedir()
+    {
+        return 40000;  // Programcı maaşı
+    }
+}
+
+// Stajyer sınıfı, Calisan sınıfından devamıdır
+public class Stajyer : Calisan
+{
+    public override decimal MaasinizNedir()
+    {
+        return 5000;  // Stajyer maaşı
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Çalışan nesnelerini oluşturuyoruz
+        List<Calisan> calisanlar = new List<Calisan>
+        {
+            new GenelMudur(),
+            new Mudur(),
+            new Programci(),
+            new Stajyer()
+        };
+
+        // Toplam maaşı hesaplama
+        decimal toplamMaas = 0;
+        foreach (var calisan in calisanlar)
+        {
+            toplamMaas += calisan.MaasinizNedir();
+        }
+
+        // Toplam maaşı ekrana yazdırıyoruz
+        Console.WriteLine("Toplam maaş: " + toplamMaas);
+    }
+}
